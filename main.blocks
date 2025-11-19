@@ -15,4 +15,4 @@
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="d{3r9jKIXgz(S@Gh5kjx"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block></xml>
+`</field><data>{"commentRefs":[],"fieldData":{"img":null}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="d{3r9jKIXgz(S@Gh5kjx"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="music_playable_play" id=")H=@S!81$-Jq6}SkLH#R"><field name="playbackMode">music.PlaybackMode.LoopingInBackground</field><value name="toPlay"><shadow type="music_melody_playable" id="=dW$hQU`wQ09Y|u2RNby"><field name="melody">music.baDing</field></shadow><block type="music_song_field_editor" id=";db4]gPE8s(2_An1HOF+"><field name="song">assets.song`cancion saika`</field><data>{"commentRefs":[],"fieldData":{"song":"mySongs.song1"}}</data></block></value></block></next></block></statement></block></xml>
