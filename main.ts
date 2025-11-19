@@ -21,6 +21,7 @@ let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
 music.play(music.createSong(assets.song`cancion saika`), music.PlaybackMode.LoopingInBackground)
+music.setVolume(5)
 controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level1`)
 tiles.placeOnRandomTile(mySprite, assets.tile`transparency16`)
