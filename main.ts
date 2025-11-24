@@ -1,3 +1,15 @@
+controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
+controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
+controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+	
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
     game.over(true)
     info.startCountdown(10)
