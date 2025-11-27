@@ -291,8 +291,8 @@ mySprite = sprites.create(img`
     ..................................................
     ..................................................
     `, SpriteKind.Player)
-music.play(music.createSong(hex`0078000408020107001c00020a006400f40164000004000000000000000000000000000000000352000400080002192c08000c00021b2a0c001000021d2910001400021e271400180002202518001c0001241c00200001242000240002202524002800021e2728002c00021d292c003000021d2a30003400021b2c`), music.PlaybackMode.LoopingInBackground)
-music.setVolume(5)
+music.play(music.createSong(assets.song`batido de frutas`), music.PlaybackMode.LoopingInBackground)
+music.setVolume(0)
 controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level1`)
 tiles.placeOnRandomTile(mySprite, assets.tile`transparency16`)
