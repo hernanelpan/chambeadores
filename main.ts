@@ -931,5 +931,5 @@ music.play(music.createSong(assets.song`batido de frutas`), music.PlaybackMode.L
 music.setVolume(0)
 controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level1`)
-tiles.placeOnRandomTile(mySprite, assets.tile`transparency16`)
+tiles.placeOnRandomTile(mySprite, sprites.dungeon.floorDark5)
 scene.cameraFollowSprite(mySprite)
