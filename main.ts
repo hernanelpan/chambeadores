@@ -213,8 +213,14 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles13, function (sprite, location) {
 	
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprite, location) {
+	
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles5, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level2`)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile14, function (sprite, location) {
+	
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -646,6 +652,9 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile8, function (sprite, location) {
+	
+})
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     mySprite,
@@ -861,6 +870,9 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
     game.over(true)
     info.startCountdown(10)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile12, function (sprite, location) {
+	
 })
 let mySprite: Sprite = null
 mySprite = sprites.create(img`
