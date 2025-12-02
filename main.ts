@@ -933,3 +933,8 @@ controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level1`)
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.floorDark5)
 scene.cameraFollowSprite(mySprite)
+game.onUpdate(function () {
+    if (!(controller.left.isPressed()) && (controller.up.isPressed() && (controller.right.isPressed() && controller.down.isPressed()))) {
+        animation.stopAnimation(animation.AnimationTypes.All, mySprite)
+    }
+})
