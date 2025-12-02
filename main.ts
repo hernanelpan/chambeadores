@@ -1051,8 +1051,3 @@ controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level1`)
 tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 12))
 scene.cameraFollowSprite(mySprite)
-game.onUpdate(function () {
-    if (!(controller.left.isPressed()) && (controller.up.isPressed() && (controller.right.isPressed() && controller.down.isPressed()))) {
-        animation.stopAnimation(animation.AnimationTypes.All, mySprite)
-    }
-})
