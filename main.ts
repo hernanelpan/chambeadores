@@ -1,5 +1,5 @@
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
+    characterAnimations.loopFrames(
     mySprite,
     [img`
         ..................................................
@@ -207,7 +207,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         ..................................................
         `],
     200,
-    true
+    characterAnimations.rule(Predicate.MovingUp)
     )
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles13, function (sprite, location) {
@@ -218,7 +218,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprit
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles5, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level2`)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(8, 1))
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(8, 4))
     mySprite2 = sprites.create(img`
         ..................................................
         ..................................................
@@ -271,13 +271,13 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles5, function (s
         ..................................................
         ..................................................
         `, SpriteKind.Enemy)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(25, 3))
+    tiles.placeOnTile(mySprite2, tiles.getTileLocation(25, 3))
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile14, function (sprite, location) {
 	
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
+    characterAnimations.loopFrames(
     mySprite,
     [img`
         ..................................................
@@ -485,7 +485,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         ..................................................
         `],
     200,
-    true
+    characterAnimations.rule(Predicate.MovingLeft)
     )
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles7, function (sprite, location) {
@@ -495,7 +495,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles15, function (
 	
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
+    characterAnimations.loopFrames(
     mySprite,
     [img`
         ..................................................
@@ -703,14 +703,14 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         ..................................................
         `],
     200,
-    true
+    characterAnimations.rule(Predicate.MovingRight)
     )
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile8, function (sprite, location) {
 	
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
+    characterAnimations.loopFrames(
     mySprite,
     [img`
         .......ffffff.....................................
@@ -918,7 +918,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
         ..................................................
         `],
     200,
-    true
+    characterAnimations.rule(Predicate.MovingDown)
     )
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
