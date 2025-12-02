@@ -210,6 +210,12 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     true
     )
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles13, function (sprite, location) {
+	
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles5, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level2`)
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     mySprite,
@@ -421,6 +427,12 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     200,
     true
     )
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles7, function (sprite, location) {
+	
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles15, function (sprite, location) {
+	
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
