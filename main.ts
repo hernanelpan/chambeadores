@@ -978,9 +978,6 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     characterAnimations.rule(Predicate.MovingDown)
     )
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-	
-})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
     game.over(true)
     info.startCountdown(10)
@@ -988,9 +985,13 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sp
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile12, function (sprite, location) {
 	
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    info.changeLifeBy(-1)
+})
 let mySprite22: Sprite = null
 let myEnemy: Sprite = null
 let mySprite: Sprite = null
+info.setLife(5)
 game.showLongText("Nivel 1", DialogLayout.Bottom)
 mySprite = sprites.create(img`
     ..................................................
