@@ -763,7 +763,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     )
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile8, function (sprite, location) {
-	
+    tiles.setCurrentTilemap(tilemap`level4`)
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     characterAnimations.loopFrames(
