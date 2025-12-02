@@ -206,7 +206,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         ..................................................
         ..................................................
         `],
-    200,
+    150,
     characterAnimations.rule(Predicate.MovingUp)
     )
 })
@@ -540,7 +540,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
         ..................................................
         ..................................................
         `],
-    200,
+    150,
     characterAnimations.rule(Predicate.MovingLeft)
     )
 })
@@ -758,7 +758,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
         ..................................................
         ..................................................
         `],
-    200,
+    150,
     characterAnimations.rule(Predicate.MovingRight)
     )
 })
