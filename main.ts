@@ -1006,7 +1006,7 @@ controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level8`)
 tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 12))
 scene.cameraFollowSprite(mySprite)
-game.onUpdateInterval(6000, function () {
+game.onUpdateInterval(10000, function () {
     slime = sprites.create(img`
         ..................................................
         ..................................................
