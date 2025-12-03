@@ -1007,7 +1007,7 @@ controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level8`)
 tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 12))
 scene.cameraFollowSprite(mySprite)
-game.onUpdateInterval(5000, function () {
+game.onUpdateInterval(6000, function () {
     slime = sprites.create(img`
         ..................................................
         ..................................................
@@ -1061,9 +1061,9 @@ game.onUpdateInterval(5000, function () {
         ..................................................
         `, SpriteKind.Enemy)
     tiles.placeOnTile(slime, tiles.getTileLocation(17, 24))
-    slime.follow(mySprite)
+    slime.follow(mySprite, 30)
 })
-game.onUpdateInterval(5000, function () {
+game.onUpdateInterval(6000, function () {
     mySprite22 = sprites.create(img`
         ..................................................
         ..................................................
@@ -1117,5 +1117,5 @@ game.onUpdateInterval(5000, function () {
         ..................................................
         `, SpriteKind.Enemy)
     tiles.placeOnTile(mySprite22, tiles.getTileLocation(8, 13))
-    mySprite22.follow(mySprite, 50)
+    mySprite22.follow(mySprite, 30)
 })
