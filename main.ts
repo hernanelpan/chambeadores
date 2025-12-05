@@ -256,7 +256,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprit
     tiles.setCurrentTilemap(tilemap`level 0`)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    espada = sprites.create(img`
+    Banano = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -1001,11 +1001,16 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthWest0, fun
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile12, function (sprite, location) {
 	
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    sprites.destroy(otherSprite)
+    sprites.destroy(sprite)
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
     sprites.destroy(otherSprite)
 })
-let espada: Sprite = null
+let Banano: Sprite = null
 let slime: Sprite = null
 let mySprite: Sprite = null
 info.setLife(5)
