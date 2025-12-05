@@ -214,9 +214,9 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles13, function (
 	
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprite, location) {
-    tiles.setCurrentTilemap(tilemap`level 0`)
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(7, 98))
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(6, 97))
     game.showLongText("Nivel 3", DialogLayout.Bottom)
+    tiles.setCurrentTilemap(tilemap`level 0`)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     espada = sprites.create(img`
