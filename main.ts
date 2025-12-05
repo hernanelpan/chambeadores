@@ -215,6 +215,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles13, function (
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprite, location) {
     tiles.setCurrentTilemap(tilemap`level 0`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(7, 98))
     for (let index = 0; index < 10; index++) {
         slime = sprites.create(img`
             ..................................................
@@ -271,7 +272,6 @@ scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprit
         slime.follow(mySprite, 30)
         tiles.placeOnRandomTile(slime, sprites.swamp.swampTile16)
     }
-    tiles.placeOnTile(mySprite, tiles.getTileLocation(7, 98))
     game.showLongText("Nivel 3", DialogLayout.Bottom)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -1142,6 +1142,3 @@ for (let index = 0; index < 2; index++) {
     slime.follow(mySprite, 30)
     tiles.placeOnRandomTile(slime, sprites.castle.tilePath5)
 }
-game.onUpdateInterval(15000, function () {
-	
-})
