@@ -250,7 +250,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprit
             ........88888888..............
             ........cbbccbbc..............
             `, SpriteKind.Enemy)
-        tiles.placeOnTile(slime, tiles.getTileLocation(17, 24))
+        tiles.placeOnRandomTile(mySprite, sprites.swamp.swampTile16)
         slime.follow(mySprite, 30)
     }
     tiles.setCurrentTilemap(tilemap`level 0`)
@@ -333,8 +333,8 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles5, function (s
             ..................................................
             ..................................................
             `, SpriteKind.Enemy)
-        tiles.placeOnTile(slime, tiles.getTileLocation(17, 24))
         slime.follow(mySprite, 30)
+        tiles.placeOnRandomTile(mySprite, sprites.castle.tilePath5)
     }
     game.showLongText("Nivel 2", DialogLayout.Bottom)
 })
@@ -1121,6 +1121,6 @@ for (let index = 0; index < 2; index++) {
         ..................................................
         ..................................................
         `, SpriteKind.Enemy)
-    tiles.placeOnTile(slime, tiles.getTileLocation(17, 24))
+    tiles.placeOnRandomTile(mySprite, sprites.castle.tilePath5)
     slime.follow(mySprite, 30)
 }
