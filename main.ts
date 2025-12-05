@@ -213,6 +213,11 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles13, function (sprite, location) {
 	
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level 0`)
+    tiles.placeOnTile(mySprite, tiles.getTileLocation(7, 98))
+    game.showLongText("Nivel 3", DialogLayout.Bottom)
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     espada = sprites.create(img`
         . . . . . . . . . . . . . . . . 
@@ -292,6 +297,9 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles5, function (s
     tiles.placeOnTile(myEnemy, tiles.getTileLocation(25, 3))
     myEnemy.follow(mySprite)
     game.showLongText("Nivel 2", DialogLayout.Bottom)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile14, function (sprite, location) {
+	
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     characterAnimations.loopFrames(
@@ -723,6 +731,12 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     characterAnimations.rule(Predicate.MovingRight)
     )
 })
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthEast0, function (sprite, location) {
+	
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile8, function (sprite, location) {
+	
+})
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     characterAnimations.loopFrames(
     mySprite,
@@ -935,7 +949,16 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     characterAnimations.rule(Predicate.MovingDown)
     )
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundNorthEast0, function (sprite, location) {
+	
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundNorthWest0, function (sprite, location) {
+    tiles.setCurrentTilemap(tilemap`level1`)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthWest0, function (sprite, location) {
+	
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile12, function (sprite, location) {
 	
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
@@ -1006,7 +1029,7 @@ controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level8`)
 tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 12))
 scene.cameraFollowSprite(mySprite)
-game.onUpdateInterval(10000, function () {
+game.onUpdateInterval(15000, function () {
     slime = sprites.create(img`
         ..................................................
         ..................................................
