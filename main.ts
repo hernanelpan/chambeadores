@@ -1002,7 +1002,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile12, function (spri
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
-    sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
+    sprites.destroy(otherSprite)
 })
 let espada: Sprite = null
 let slime: Sprite = null
