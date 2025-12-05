@@ -1021,9 +1021,12 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthWest0, fun
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile12, function (sprite, location) {
 	
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+	
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
-    sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
+    sprites.destroy(otherSprite)
 })
 let Banano: Sprite = null
 let slime: Sprite = null
