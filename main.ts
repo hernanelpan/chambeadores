@@ -209,6 +209,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     150,
     characterAnimations.rule(Predicate.MovingUp)
     )
+    ShootDirection = 3
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles13, function (sprite, location) {
 	
@@ -332,24 +333,85 @@ scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprit
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    Banano = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 . . . . . . . 
-        . . . . . 1 1 1 1 . . . . . . . 
-        . . . . . 1 1 1 1 . . . . . . . 
-        . . . . . 1 1 1 1 . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.Projectile)
+    if (ShootDirection == 1) {
+        dart = sprites.createProjectileFromSprite(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 2 2 . . . . . . . 
+            . . . . . . . 2 2 . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, mySprite, 100, 0)
+    } else if (ShootDirection == 2) {
+        dart = sprites.createProjectileFromSprite(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 2 2 . . . . . . . 
+            . . . . . . . 2 2 . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, mySprite, -100, 0)
+    } else if (ShootDirection == 3) {
+        dart = sprites.createProjectileFromSprite(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 2 2 . . . . . . . 
+            . . . . . . . 2 2 . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, mySprite, 0, -100)
+    } else if (ShootDirection == 4) {
+        dart = sprites.createProjectileFromSprite(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 2 2 . . . . . . . 
+            . . . . . . . 2 2 . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, mySprite, 0, 100)
+    } else {
+    	
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles5, function (sprite, location) {
     music.stopAllSounds()
@@ -683,6 +745,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     150,
     characterAnimations.rule(Predicate.MovingLeft)
     )
+    ShootDirection = 2
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles7, function (sprite, location) {
 	
@@ -901,6 +964,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     150,
     characterAnimations.rule(Predicate.MovingRight)
     )
+    ShootDirection = 1
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthEast0, function (sprite, location) {
 	
@@ -1119,6 +1183,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     200,
     characterAnimations.rule(Predicate.MovingDown)
     )
+    ShootDirection = 4
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundNorthEast0, function (sprite, location) {
 	
@@ -1136,11 +1201,16 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthWest0, fun
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile12, function (sprite, location) {
 	
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    sprites.destroy(otherSprite)
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
     sprites.destroy(otherSprite)
 })
-let Banano: Sprite = null
+let dart: Sprite = null
+let ShootDirection = 0
 let slime: Sprite = null
 let vida: Sprite = null
 let mySprite: Sprite = null
@@ -1312,3 +1382,4 @@ for (let index = 0; index < 2; index++) {
     slime.follow(mySprite, 30)
     tiles.placeOnRandomTile(slime, sprites.castle.tilePath5)
 }
+ShootDirection = 1
