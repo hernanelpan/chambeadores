@@ -1258,7 +1258,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundNorthWest0, fun
     tiles.setCurrentTilemap(tilemap`level1`)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthWest0, function (sprite, location) {
-	
+    tiles.setCurrentTilemap(tilemap`level11`)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile12, function (sprite, location) {
 	
