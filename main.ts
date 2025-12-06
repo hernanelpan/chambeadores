@@ -221,10 +221,10 @@ scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile6, function (sprit
     sprites.destroyAllSpritesOfKind(SpriteKind.Food)
     sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
     music.stopAllSounds()
+    game.showLongText("Nivel 3", DialogLayout.Bottom)
     music.play(music.createSong(hex`00a0000408040400001c00010a006400f401640000040000000000000000000000000005000004180014001800010534003800010554005800010574007800010505001c000f0a006400f4010a00000400000000000000000000000000000000024a000000040001190c001000010c1c0020000129200024000219272c003000010c4000440001194c005000010c5400580001195c0060000129600064000219276c007000010c7c008000010c06001c00010a006400f401640000040000000000000000000000000000000002300008000c00012218001c00012228002c00012238003c00012248004c00012258005c00012268006c00012278007c00012209010e02026400000403780000040a000301000000640001c80000040100000000640001640000040100000000fa0004af00000401c80000040a00019600000414000501006400140005010000002c0104dc00000401fa0000040a0001c8000004140005d0076400140005d0070000c800029001f40105c201f4010a0005900114001400039001000005c201f4010500058403050032000584030000fa00049001000005c201f4010500058403c80032000584030500640005840300009001049001000005c201f4010500058403c80064000584030500c8000584030000f40105ac0d000404a00f00000a0004ac0d2003010004a00f0000280004ac0d9001010004a00f0000280002d00700040408070f0064000408070000c80003c800c8000e7d00c80019000e64000f0032000e78000000fa00032c01c8000ee100c80019000ec8000f0032000edc000000fa0003f401c8000ea901c80019000e90010f0032000ea4010000fa0001c8000004014b000000c800012c01000401c8000000c8000190010004012c010000c80002c800000404c8000f0064000496000000c80002c2010004045e010f006400042c010000640002c409000404c4096400960004f6090000f40102b80b000404b80b64002c0104f40b0000f401022003000004200300040a000420030000ea01029001000004900100040a000490010000900102d007000410d0076400960010d0070000c8008e0000000100020d05080009000213030c000d0001011000110002000518001900021303200021000105280029000213032c002d0001013000310002000538003900021303400041000103480049000213054c004d000101500051000100540055000203095800590001136400650001076800690001136c006d00010170007100010074007500020309780079000113`), music.PlaybackMode.LoopingInBackground)
     tiles.placeOnTile(mySprite, tiles.getTileLocation(6, 97))
     tiles.setCurrentTilemap(tilemap`level 0`)
-    game.showLongText("Nivel 3", DialogLayout.Bottom)
     for (let index = 0; index < 30; index++) {
         slime = sprites.create(img`
             ..................................................
@@ -419,7 +419,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles5, function (sprite, location) {
+    sprites.destroyAllSpritesOfKind(SpriteKind.Food)
+    sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
     music.stopAllSounds()
+    game.showLongText("Nivel 2", DialogLayout.Bottom)
     music.play(music.createSong(assets.song`cancion saika`), music.PlaybackMode.LoopingInBackground)
     tiles.placeOnTile(mySprite, tiles.getTileLocation(8, 4))
     tiles.setCurrentTilemap(tilemap`level 2`)
@@ -534,7 +537,6 @@ scene.onOverlapTile(SpriteKind.Player, sprites.builtin.forestTiles5, function (s
             `, SpriteKind.Food)
         tiles.placeOnRandomTile(vida, sprites.castle.tilePath5)
     }
-    game.showLongText("Nivel 2", DialogLayout.Bottom)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile14, function (sprite, location) {
 	
@@ -1209,10 +1211,10 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthWest0, fun
     sprites.destroyAllSpritesOfKind(SpriteKind.Enemy2)
     sprites.destroyAllSpritesOfKind(SpriteKind.Food)
     sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
-    tiles.setCurrentTilemap(tilemap`level11`)
     game.showLongText("Nivel 4", DialogLayout.Bottom)
+    tiles.setCurrentTilemap(tilemap`level11`)
     tiles.placeOnTile(mySprite, tiles.getTileLocation(42, 1))
-    for (let index = 0; index < 1; index++) {
+    for (let index = 0; index < 3; index++) {
         slime2 = sprites.create(img`
             ..................................................
             ..................................................
@@ -1268,7 +1270,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthWest0, fun
         slime2.follow(mySprite, 30)
         tiles.placeOnRandomTile(slime2, sprites.dungeon.floorLightMoss)
     }
-    for (let index = 0; index < 6; index++) {
+    for (let index = 0; index < 4; index++) {
         vida = sprites.create(img`
             ..................................................
             ..................................................
@@ -1323,7 +1325,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthWest0, fun
             `, SpriteKind.Food)
         tiles.placeOnRandomTile(vida, sprites.dungeon.floorLightMoss)
     }
-    for (let index = 0; index < 30; index++) {
+    for (let index = 0; index < 50; index++) {
         slime = sprites.create(img`
             ..................................................
             ..................................................
@@ -1377,7 +1379,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.darkGroundSouthWest0, fun
             ..................................................
             `, SpriteKind.Enemy)
         slime.follow(mySprite, 30)
-        tiles.placeOnRandomTile(slime, sprites.swamp.swampTile16)
+        tiles.placeOnRandomTile(slime, sprites.dungeon.floorLightMoss)
     }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.swamp.swampTile12, function (sprite, location) {
