@@ -225,7 +225,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairNorth, function (spr
     game.showLongText("Nivel 5", DialogLayout.Bottom)
     tiles.placeOnTile(mySprite, tiles.getTileLocation(6, 78))
     tiles.setCurrentTilemap(tilemap`level12`)
-    for (let index = 0; index < 15; index++) {
+    for (let index = 0; index < 50; index++) {
         slime = sprites.create(img`
             ..................................................
             ..................................................
