@@ -2,7 +2,7 @@ namespace SpriteKind {
     export const Enemy2 = SpriteKind.create()
 }
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, location) {
-	
+    game.gameOver(true)
 })
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     characterAnimations.loopFrames(
